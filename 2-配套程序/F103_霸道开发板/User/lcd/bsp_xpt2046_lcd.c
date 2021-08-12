@@ -641,13 +641,13 @@ Failure:
 /**
   * @brief  从FLASH中获取 或 重新校正触摸参数（校正后会写入到SPI FLASH中）
   * @note		若FLASH中从未写入过触摸参数，
-	*					会触发校正程序校正LCD_Mode指定模式的触摸参数，此时其它模式写入默认值
+	*						会触发校正程序校正LCD_Mode指定模式的触摸参数，此时其它模式写入默认值
   *
 	*					若FLASH中已有触摸参数，且不强制重新校正
-	*					会直接使用FLASH里的触摸参数值
+	*						会直接使用FLASH里的触摸参数值
   *
 	*					每次校正时只会更新指定的LCD_Mode模式的触摸参数，其它模式的不变
-  * @note   本函数调用后会把液晶模式设置为LCD_Mode
+  * @note  本函数调用后会把液晶模式设置为LCD_Mode
   *
 	* @param  LCD_Mode:要校正触摸参数的液晶模式
 	* @param  forceCal:是否强制重新校正参数，可以为以下值：
@@ -772,7 +772,7 @@ uint8_t XPT2046_TouchDetect(void)
 			{
 				touch_state = XPT2046_STATE_WAITING;
 				detectResult =TOUCH_NOT_PRESSED;
-			}
+				}
 			else	//无触摸
 			{
 				touch_state = XPT2046_STATE_RELEASE;
